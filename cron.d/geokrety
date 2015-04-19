@@ -1,0 +1,20 @@
+
+MAILTO="contact+cron@geokretymap.org"
+
+# Update GeoKrety
+# dev is updated every 50 min
+*/50 * * * * gkmap-dev curl -s http://api.dev.geokretymap.org/update2.php > /dev/null
+# prod is updated every 15 min
+*/15 * * * * gkmap     curl -s http://api.geokretymap.org/update2.php > /dev/null
+
+
+# Update GeoKrety Details
+# dev is updated every 6 hours
+35 */6 * * * gkmap-dev curl -s http://api.dev.geokretymap.org/update-details.php > /dev/null
+# prod is updated every 3 hours
+20 */3 * * * gkmap     curl -s http://api.geokretymap.org/update-details.php > /dev/null
+
+
+# Backup GeoKrety Databases
+# prod is updated every 3 hours
+35 */3 * * * gkmap     curl -s http://api.geokretymap.org/update-details.php > /dev/null

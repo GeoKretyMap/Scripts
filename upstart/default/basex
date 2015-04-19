@@ -1,0 +1,3 @@
+
+#JVM_OPTS=
+DAEMON_OPTS="-p2984 -e2985"

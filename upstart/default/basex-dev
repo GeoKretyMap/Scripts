@@ -1,0 +1,3 @@
+
+#JVM_OPTS=
+DAEMON_OPTS="-p1984 -e1985"

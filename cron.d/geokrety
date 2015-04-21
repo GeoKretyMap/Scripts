@@ -17,4 +17,4 @@ MAILTO="contact+cron@geokretymap.org"
 
 # Backup GeoKrety Databases
 # prod is updated every 3 hours
-35 */3 * * * gkmap     curl -s http://api.geokretymap.org/update-details.php > /dev/null
+35 */3 * * * gkmap     curl -s http://api.geokretymap.org/backup.php > /dev/null

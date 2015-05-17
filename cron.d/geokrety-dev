@@ -2,7 +2,8 @@
 MAILTO="contact+cron@geokretymap.org"
 
 # Admin GeoKrety Databases (PROD)
-*/15 *   * * * gkmap curl -s http://api.geokretymap.org/update2.php > /dev/null
-36   *   * * * gkmap curl -s http://api.geokretymap.org/optimize.php > /dev/null
-20   */3 * * * gkmap curl -s http://api.geokretymap.org/update-details.php > /dev/null
-35   */3 * * * gkmap curl -s http://api.geokretymap.org/backup.php > /dev/null
+30   2   * * * gkmap-dev curl -s http://api.dev.geokretymap.org/update2.php > /dev/null
+35   2   * * * gkmap-dev curl -s http://api.dev.geokretymap.org/update-details.php > /dev/null
+40   2   * * * gkmap-dev /home/kumy/GIT/Scripts/rrd/graph_rrd.sh > /dev/null
+#40   2   * * * gkmap-dev curl -s http://api.dev.geokretymap.org/optimize.php > /dev/null
+#45   2   * * * gkmap-dev curl -s http://api.dev.geokretymap.org/backup.php > /dev/null

@@ -16,6 +16,7 @@ function graph {
             VDEF:ds1avg=details,AVERAGE \
             VDEF:ds1min=details,MINIMUM \
             VDEF:ds1pct=details,95,PERCENT \
+            CDEF:ds1div=details,10,/ \
             COMMENT:"           " \
             COMMENT:"Maximum    " \
             COMMENT:"Average    " \
@@ -26,7 +27,7 @@ function graph {
             GPRINT:ds0avg:"%6.2lf %SGK" \
             GPRINT:ds0min:"%6.2lf %SGK" \
             GPRINT:ds0pct:"%6.2lf %SGK\l" \
-            LINE1:details#ff0000:"details   " \
+            LINE1:ds1div#ff0000:"details   " \
             GPRINT:ds1max:"%6.2lf %SGK" \
             GPRINT:ds1avg:"%6.2lf %SGK" \
             GPRINT:ds1min:"%6.2lf %SGK" \

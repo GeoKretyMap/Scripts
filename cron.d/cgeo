@@ -1,0 +1,5 @@
+
+MAILTO="contact+cron@geokretymap.org"
+
+# Download new cgeo nightly apk for fdroid mirror
+30   1   * * * fdroid /home/gkmap/web/admin-scripts/cgeo/fdroid-update.sh nightly

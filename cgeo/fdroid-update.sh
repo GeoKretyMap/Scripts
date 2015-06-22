@@ -53,8 +53,9 @@ fi
 
 if [[ $1 == "nightly" ]]; then
    # - cgeo-nightly-nojit lead to duplicate versions
+   # - Contact is not yet available
    #for apk in cgeo-nightly cgeo-nightly-nojit cgeo-calendar-nightly cgeo-contacts-nightly; do
-   for apk in cgeo-nightly cgeo-calendar-nightly cgeo-contacts-nightly; do
+   for apk in cgeo-nightly cgeo-calendar-nightly; do
       download_apk "${apk}" "${apk_nightly}/${apk}.apk" "nightly"
    done
    update_indexes "nightly"

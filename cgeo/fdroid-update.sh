@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=/usr/local/bin:/usr/bin:/bin
+
 fdroid_dir="/home/fdroid/www"
 
 apk_nightly="http://download.cgeo.org"
